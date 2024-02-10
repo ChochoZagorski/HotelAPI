@@ -15,7 +15,7 @@ namespace HotelAPI.Controllers
             return new Hotel { Id = id };
         }
 
-        [HttpGet("GetHotelByName")]
+        [HttpHead("GetHotelByName")]
         public Hotel GetName(string name)
         {
             return new Hotel { Name = name };
