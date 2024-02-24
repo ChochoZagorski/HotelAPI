@@ -8,17 +8,10 @@ namespace HotelAPI.Controllers
     [ApiController]
     public class HotelController : ControllerBase
     {
-
         [HttpGet("GetHotel")]
-        public Hotel Get(string id)
+        public void Get(string id)
         {
-            return new Hotel { Id = id };
-        }
 
-        [HttpHead("GetHotelByName")]
-        public Hotel GetName(string name)
-        {
-            return new Hotel { Name = name };
         }
     }
 }
