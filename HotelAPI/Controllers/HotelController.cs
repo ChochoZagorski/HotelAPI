@@ -23,9 +23,9 @@ namespace HotelAPI.Controllers
         }       
 
         [HttpPost("Create")]
-        public void Create([FromBody] Hotel hotel)
+        public void Create([FromBody] CreateHotelRequest createRequest)
         {
-            hotelService.CreateHotel(hotel);
+            hotelService.CreateHotel(createRequest);
         }
 
         [HttpDelete("Delete")]

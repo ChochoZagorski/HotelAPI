@@ -12,8 +12,10 @@ namespace HotelAPI.Services
             this.dbContext = dbContext;
         }
 
-        public bool CreateHotel(Hotel hotel)
+        public bool CreateHotel(CreateHotelRequest createRequest)
         {
+            var hotel = new Hotel(createRequest);
+
             dbContext.Hotels.Add(hotel);
             dbContext.SaveChanges();
 
