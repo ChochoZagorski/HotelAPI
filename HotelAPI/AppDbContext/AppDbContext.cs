@@ -18,10 +18,10 @@ namespace HotelAPI.MyAppDbContext
         {
             // Seed initial data
             modelBuilder.Entity<Hotel>().HasData(
-                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Hills" },
-                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Sofia" },
-                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Nexus" },
-                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Nessebar" }
+                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Hills", City = "Los Angeles", Country = "United States of America" },
+                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Sofia", City = "Sofia", Country = "Bulgaria" },
+                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Nexus", City = "Mexico", Country = "Mexico" },
+                new Hotel { Id = Guid.NewGuid().ToString(), Name = "Nessebar", City = "Nessebar", Country = "Bulgaria" }
                 // Add more initial records as needed
             );
 
