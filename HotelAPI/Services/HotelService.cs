@@ -19,6 +19,20 @@ namespace HotelAPI.Services
 
             return true;
         }
+        public bool DeleteHotel(string id)
+        {
+            var hotel = dbContext.Hotels.Find(id);
+
+            if (hotel == null)
+            {
+                return false;
+            }
+
+            dbContext.Hotels.Remove(hotel!);
+            dbContext.SaveChanges();
+
+            return true;
+        }
 
         public IEnumerable<Hotel> GetHotels()
         {

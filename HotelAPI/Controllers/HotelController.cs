@@ -20,12 +20,18 @@ namespace HotelAPI.Controllers
         public IEnumerable<Hotel> Get()
         {
             return hotelService.GetHotels();
-        }
+        }       
 
         [HttpPost("Create")]
         public void Create([FromBody] Hotel hotel)
         {
             hotelService.CreateHotel(hotel);
+        }
+
+        [HttpDelete("Delete")]
+        public void Delete(string id)
+        {
+            hotelService.DeleteHotel(id);
         }
     }
 }

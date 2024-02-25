@@ -7,5 +7,7 @@ namespace HotelAPI.Services
         IEnumerable<Hotel> GetHotels();
 
         bool CreateHotel(Hotel hotel);
+
+        bool DeleteHotel(string id);
     }
 }
