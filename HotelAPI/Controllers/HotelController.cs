@@ -33,5 +33,10 @@ namespace HotelAPI.Controllers
         {
             hotelService.DeleteHotel(id);
         }
+        [HttpPut("Edit")]
+        public void Edit([FromBody] Hotel hotel)
+        {
+            hotelService.EditHotel(hotel);
+        }
     }
 }

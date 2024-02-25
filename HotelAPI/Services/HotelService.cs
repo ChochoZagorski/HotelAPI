@@ -36,6 +36,13 @@ namespace HotelAPI.Services
             return true;
         }
 
+        public bool EditHotel(Hotel hotel)
+        {
+            dbContext.Hotels.Update(hotel);
+            dbContext.SaveChanges();
+            return true;
+        }
+
         public IEnumerable<Hotel> GetHotels()
         {
             return dbContext.Hotels.ToList();

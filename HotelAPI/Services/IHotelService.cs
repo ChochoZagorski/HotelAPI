@@ -9,5 +9,7 @@ namespace HotelAPI.Services
         bool CreateHotel(CreateHotelRequest createRequest);
 
         bool DeleteHotel(string id);
+
+        bool EditHotel(Hotel hotel);
     }
 }
