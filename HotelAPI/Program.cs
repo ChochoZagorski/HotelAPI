@@ -12,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IHotelService, HotelService>();
+builder.Services.AddScoped<IGuestService, GuestService>();
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

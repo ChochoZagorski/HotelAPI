@@ -13,6 +13,7 @@ namespace HotelAPI.MyAppDbContext
         }
 
         public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Guest> Guests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +25,11 @@ namespace HotelAPI.MyAppDbContext
                 new Hotel { Id = Guid.NewGuid().ToString(), Name = "Nessebar", City = "Nessebar", Country = "Bulgaria" }
                 // Add more initial records as needed
             );
+
+            modelBuilder.Entity<Guest>().HasData(
+               new Guest { Id = "1", FirstName = "Rumen", LastName = "Ivanov", Age = 26, Gender = 'M', Nationality = "Bulgarian" }
+           // Add more initial records as needed
+           );
 
             base.OnModelCreating(modelBuilder);
         }
